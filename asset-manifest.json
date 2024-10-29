@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/4X4R-US/static/css/main.a6d2c594.css",
-    "main.js": "/4X4R-US/static/js/main.d03b3996.js",
-    "static/js/453.6a070f1d.chunk.js": "/4X4R-US/static/js/453.6a070f1d.chunk.js",
-    "static/media/homehero.jpg": "/4X4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
-    "static/media/visionimage.jpg": "/4X4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
-    "index.html": "/4X4R-US/index.html",
-    "main.a6d2c594.css.map": "/4X4R-US/static/css/main.a6d2c594.css.map",
-    "main.d03b3996.js.map": "/4X4R-US/static/js/main.d03b3996.js.map",
-    "453.6a070f1d.chunk.js.map": "/4X4R-US/static/js/453.6a070f1d.chunk.js.map"
+    "main.css": "/4x4R-US/static/css/main.54e4558f.css",
+    "main.js": "/4x4R-US/static/js/main.3a4e766e.js",
+    "static/js/453.6a070f1d.chunk.js": "/4x4R-US/static/js/453.6a070f1d.chunk.js",
+    "static/media/homehero.jpg": "/4x4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
+    "static/media/visionimage.jpg": "/4x4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
+    "index.html": "/4x4R-US/index.html",
+    "main.54e4558f.css.map": "/4x4R-US/static/css/main.54e4558f.css.map",
+    "main.3a4e766e.js.map": "/4x4R-US/static/js/main.3a4e766e.js.map",
+    "453.6a070f1d.chunk.js.map": "/4x4R-US/static/js/453.6a070f1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6d2c594.css",
-    "static/js/main.d03b3996.js"
+    "static/css/main.54e4558f.css",
+    "static/js/main.3a4e766e.js"
   ]
 }
