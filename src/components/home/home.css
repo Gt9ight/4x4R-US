@@ -223,26 +223,4 @@ body {
   
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar-hamburger {
-        display: block; /* Show hamburger icon on smaller screens */
-    }
 
-    .navbar-links {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
-        width: 100%;
-        display: none; /* Hide by default */
-    }
-
-    .navbar-links.open {
-        display: flex; /* Show when open */
-    }
-
-    .brands-row {
-        flex-direction: column; /* Stack brands vertically on mobile */
-    }
-}
