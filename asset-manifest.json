@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/4X4R-US/static/css/main.96bdf695.css",
-    "main.js": "/4X4R-US/static/js/main.d1abad12.js",
+    "main.css": "/4X4R-US/static/css/main.a6d2c594.css",
+    "main.js": "/4X4R-US/static/js/main.d03b3996.js",
     "static/js/453.6a070f1d.chunk.js": "/4X4R-US/static/js/453.6a070f1d.chunk.js",
     "static/media/homehero.jpg": "/4X4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
     "static/media/visionimage.jpg": "/4X4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
     "index.html": "/4X4R-US/index.html",
-    "main.96bdf695.css.map": "/4X4R-US/static/css/main.96bdf695.css.map",
-    "main.d1abad12.js.map": "/4X4R-US/static/js/main.d1abad12.js.map",
+    "main.a6d2c594.css.map": "/4X4R-US/static/css/main.a6d2c594.css.map",
+    "main.d03b3996.js.map": "/4X4R-US/static/js/main.d03b3996.js.map",
     "453.6a070f1d.chunk.js.map": "/4X4R-US/static/js/453.6a070f1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96bdf695.css",
-    "static/js/main.d1abad12.js"
+    "static/css/main.a6d2c594.css",
+    "static/js/main.d03b3996.js"
   ]
 }
