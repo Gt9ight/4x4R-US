@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './home.css'; // Ensure this file includes the new styles
+
 
 function Home() {
     const [isOpen, setIsOpen] = useState(false);
+
+
+
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -34,9 +38,9 @@ function Home() {
                     <button className='hero-button'>Contact Us</button>
                 </div>
             </div>
-
+            <h2 className='brand-header'>Our Brands</h2>
             <div className="brands-container">
-                <h2>Our Brands</h2>
+                
                 <div className="brands-row">
                     {mockBrands.map((brand, index) => (
                         <div key={index} className="brand-item">
@@ -52,6 +56,8 @@ function Home() {
                     At our shop, our goal is to provide the best off-road modifications and unforgettable experiences for off-road enthusiasts. We are passionate about quality, performance, and helping you push the limits of your vehicle in any terrain. Whether you’re looking for expert advice, high-quality upgrades, or a community of like-minded adventurers, we’re here to make it happen!
                 </p>
             </div>
+
+
         </div>
     );
 }
