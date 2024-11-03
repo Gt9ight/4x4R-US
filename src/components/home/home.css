@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+body, html {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
@@ -55,21 +55,21 @@ body {
 
   @media (max-width: 768px) {
     .navbar-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 60px);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000; /* Ensure it's above other content */
-      }
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 100%; /* Keep it fully off-screen initially */
+      background-color: #333;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 60px);
+      transition: left 0.3s ease-in-out;
+      z-index: 1000; /* Ensure it's above other content */
+  }
   
-    .navbar-links.open {
-      transform: translateX(0);
-    }
+  .navbar-links.open {
+    left: 0; /* Slide in when open */
+}
   
     .navbar-links li {
       text-align: center;
@@ -125,10 +125,9 @@ body {
 
 /* Brands Container Styles */
 .brands-container {
-    padding: 50px;
-
-    text-align: center;
-    overflow-x: auto;
+  padding: 50px;
+  text-align: center;
+  overflow-x: auto;
   }
   
   .brands-container h2 {
@@ -151,7 +150,7 @@ body {
     justify-content: center; /* Center the items */
     gap: 50px; /* Increase gap between items */
     overflow-x: auto;
-    padding: 20px 0;
+    padding: 50px 0;
     scrollbar-width: thin;
     scrollbar-color: #888 #f5f5f5;
     min-width: max-content;
@@ -173,12 +172,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     font-size: 1.2rem;
     color: #333;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 50px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     text-align: center;
     transition: transform 0.3s ease;
   }
@@ -186,6 +184,19 @@ body {
   .brand-item:hover {
     transform: scale(1.1);
   }
+
+  .brand-image {
+    width: 250px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.brand-item p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 
 /* Vision Container Styles */
 .vision-container {
@@ -235,6 +246,78 @@ body {
     background-position: center; /* Center the image */
   }
   
+
+  .service-container {
+    padding: 50px;
+
+    text-align: center;
+    overflow-x: auto;
+  }
+  
+  .service-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .service-header{
+  
+    margin-bottom: 0px;
+
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .service-row {
+    display: flex;
+    justify-content: center; /* Center the items */
+    gap: 50px; /* Increase gap between items */
+    overflow-x: auto;
+    padding: 50px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f5f5f5;
+    min-width: max-content;
+  }
+  
+  .service-row::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .service-row::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .service-item {
+    flex: 0 0 auto;
+    min-width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.1);
+  }
+
+  .service-image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.service-item p {
+    text-align: center;
+    margin-top: 5px;
+
+}
 
 /* Responsive Styles */
 
