@@ -1,323 +1,327 @@
 /* General Styles */
 body, html {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
+.contact-button{
+  border: solid 2px;
+  background-color: rgb(229, 76, 30);
+}
 /* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #263354;
-    color: white;
-    position: relative;
-    z-index: 1000; /* Add a high z-index */
-  }
-
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  /* Navbar links styling */
-  .navbar-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    z-index: 1000; /* Ensure links also have a high z-index */
-  }
-  .navbar-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .navbar-links li a:hover {
-    color: #ddd;
-  }
-  
-  /* Hamburger menu styling */
-  .navbar-hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-  
-  .navbar-hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-  }
-
-  @media (max-width: 768px) {
-    .navbar-links {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      left: 100%; /* Keep it fully off-screen initially */
-      background-color: #333;
-      flex-direction: column;
-      width: 100%;
-      height: calc(100vh - 60px);
-      transition: left 0.3s ease-in-out;
-      z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  .navbar-links.open {
-    left: 0; /* Slide in when open */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #263354;
+  color: white;
+  position: relative;
+  z-index: 1000; /* Add a high z-index */
 }
-  
-    .navbar-links li {
-      text-align: center;
-      margin: 20px 0;
-    }
-  
-    .navbar-hamburger {
-      display: flex;
-    }
 
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navbar links styling */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  z-index: 1000; /* Ensure links also have a high z-index */
+}
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-links li a:hover {
+  color: #ddd;
+}
+
+/* Hamburger menu styling */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 100%; /* Keep it fully off-screen initially */
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-links.open {
+  left: 0; /* Slide in when open */
+}
+
+  .navbar-links li {
+    text-align: center;
+    margin: 20px 0;
   }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+}
 
 
 
 
 /* Hero Section Styles */
 .hero-container {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    background-image: url('homehero.jpg'); /* Change to your background image */
-    background-size: cover; /* Cover the whole container */
-    background-position: center; /* Center the image */
-    display: flex; /* Use flexbox for centering content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color for contrast */
-    text-align: center; /* Center text */
-    z-index: 1; /* Ensure it’s on top */
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-image: url('homehero.jpg'); /* Change to your background image */
+  background-size: cover; /* Cover the whole container */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white; /* Text color for contrast */
+  text-align: center; /* Center text */
+  z-index: 1; /* Ensure it’s on top */
 }
 
 .hero-text {
-    position: relative;
-    z-index: 2; /* Ensure text is above the background */
+  position: relative;
+  z-index: 2; /* Ensure text is above the background */
 }
 
 .hero-text h1 {
-    font-size: 3rem; /* Large title size */
-    margin: 0; /* Remove default margin */
+  font-size: 3rem; /* Large title size */
+  margin: 0; /* Remove default margin */
 }
 
 .hero-text p {
-    font-size: 1.5rem; /* Adjust paragraph size */
-    margin: 20px 0; /* Add margin for spacing */
+  font-size: 1.5rem; /* Adjust paragraph size */
+  margin: 20px 0; /* Add margin for spacing */
 }
 
 .hero-button {
-    padding: 10px 20px;
-    background-color: #ff5722; /* Button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #ff5722; 
+  text-decoration: none;/* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 /* Brands Container Styles */
 .brands-container {
-  padding: 50px;
+padding: 50px;
+text-align: center;
+overflow-x: auto;
+}
+
+.brands-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.brand-header{
+
+  margin-bottom: 0px;
+
+  font-size: 2rem;
+  color: #333;
   text-align: center;
+}
+
+.brands-row {
+  display: flex;
+  justify-content: center; /* Center the items */
+  gap: 50px; /* Increase gap between items */
   overflow-x: auto;
-  }
-  
-  .brands-container h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
+  padding: 50px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f5;
+  min-width: max-content;
+}
 
-  .brand-header{
-  
-    margin-bottom: 0px;
+.brands-row::-webkit-scrollbar {
+  height: 8px;
+}
 
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .brands-row {
-    display: flex;
-    justify-content: center; /* Center the items */
-    gap: 50px; /* Increase gap between items */
-    overflow-x: auto;
-    padding: 50px 0;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f5f5f5;
-    min-width: max-content;
-  }
-  
-  .brands-row::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .brands-row::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
-  
-  .brand-item {
-    flex: 0 0 auto;
-    min-width: 150px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #333;
-    margin: 50px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .brand-item:hover {
-    transform: scale(1.1);
-  }
+.brands-row::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
 
-  .brand-image {
-    width: 250px; /* Adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.brand-item {
+  flex: 0 0 auto;
+  min-width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 50px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.brand-item:hover {
+  transform: scale(1.1);
+}
+
+.brand-image {
+  width: 250px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .brand-item p {
-    text-align: center;
-    margin-top: 5px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 
 
 /* Vision Container Styles */
 .vision-container {
-    position: relative; /* Position relative for the pseudo-element */
-    padding: 40px;
-    border-radius: 8px;
+  position: relative; /* Position relative for the pseudo-element */
+  padding: 40px;
+  border-radius: 8px;
 
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Hide overflow for any pseudo-element */
-  }
-  
-  .vision-container::before {
-    content: ""; /* Create a pseudo-element for the overlay */
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
-    z-index: 1; /* Place behind the text */
-  }
-  
-  .vision-container h2 {
-    font-size: 2rem;
-    color: #fafafa;
-    margin-bottom: 15px;
-    position: relative; /* Position relative to overlay */
-    z-index: 2; /* Place above the overlay */
-  }
-  
-  .vision-container p {
-    font-size: 1.1rem;
-    color: #f2f2f2;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative; /* Position relative to overlay */
-    z-index: 2; /* Place above the overlay */
-  }
-  
-  /* Add background properties for image */
-  .vision-container {
-    background-image: url('visionimage.jpg');
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the image */
-  }
-  
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflow for any pseudo-element */
+}
 
-  .service-container {
-    padding: 50px;
+.vision-container::before {
+  content: ""; /* Create a pseudo-element for the overlay */
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+  z-index: 1; /* Place behind the text */
+}
 
-    text-align: center;
-    overflow-x: auto;
-  }
-  
-  .service-container h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-  }
+.vision-container h2 {
+  font-size: 2rem;
+  color: #fafafa;
+  margin-bottom: 15px;
+  position: relative; /* Position relative to overlay */
+  z-index: 2; /* Place above the overlay */
+}
 
-  .service-header{
-  
-    margin-bottom: 0px;
+.vision-container p {
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative; /* Position relative to overlay */
+  z-index: 2; /* Place above the overlay */
+}
 
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .service-row {
-    display: flex;
-    justify-content: center; /* Center the items */
-    gap: 50px; /* Increase gap between items */
-    overflow-x: auto;
-    padding: 50px 0;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f5f5f5;
-    min-width: max-content;
-  }
-  
-  .service-row::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .service-row::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
-  
-  .service-item {
-    flex: 0 0 auto;
-    min-width: 150px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #333;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .service-item:hover {
-    transform: scale(1.1);
-  }
+/* Add background properties for image */
+.vision-container {
+  background-image: url('visionimage.jpg');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+}
 
-  .service-image {
-    width: 200px; /* Adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+
+.service-container {
+  padding: 50px;
+
+  text-align: center;
+  overflow-x: auto;
+}
+
+.service-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.service-header{
+
+  margin-bottom: 0px;
+
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.service-row {
+  display: flex;
+  justify-content: center; /* Center the items */
+  gap: 50px; /* Increase gap between items */
+  overflow-x: auto;
+  padding: 50px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f5;
+  min-width: max-content;
+}
+
+.service-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.service-row::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.service-item {
+  flex: 0 0 auto;
+  min-width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: scale(1.1);
+}
+
+.service-image {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .service-item p {
-    text-align: center;
-    margin-top: 5px;
+  text-align: center;
+  margin-top: 5px;
 
 }
 
 /* Responsive Styles */
-

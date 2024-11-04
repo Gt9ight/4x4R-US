@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './home.css'; // Ensure this file includes the new styles
 import Bilstein from './bilstein.png'
 import Rockcrawler from './rockcrawler.png'
@@ -8,6 +9,7 @@ import suspension from './suspension.webp'
 import gears from './gears.jpg'
 import wheel from './wheel.webp'
 import bumper from './bumper.png'
+import Navbar from '../navbar/Navbar';
 
 
 function Home() {
@@ -29,35 +31,22 @@ function Home() {
     ];
 
     const service = [
-        { name: 'SUSPENSION', imageSrc: suspension },
-        { name: 'TIRES & WHEEL', imageSrc: wheel },
-        { name: 'GEARS & DRIVETRAIN', imageSrc: gears },
-        { name: 'BUMPERS, FENDERS, ETC.', imageSrc: bumper },
+        { name: 'SUSPENSION', imageSrc: suspension, info: 'Upgrade your off-road ride with durable, high-performance suspensions for ultimate control, comfort, and precision on any terrain.' },
+        { name: 'TIRES & WHEEL', imageSrc: wheel, info: 'Gear up with rugged tires and wheels built for off-road power, grip, and durability—ready to tackle any terrain with confidence and control.' },
+        { name: 'GEARS & DRIVETRAIN', imageSrc: gears, info: 'Optimize your off-road performance with high-quality gears that deliver precision, durability, and efficiency for tackling any terrain with confidence.' },
+        { name: 'BUMPERS, FENDERS, ETC.', imageSrc: bumper, info: 'Transform your off-road vehicle with robust bumpers and powerful lights designed for enhanced protection and visibility, ensuring safety and style on every adventure.' },
 
     ];
 
     return (
         <div>
-            <nav className="navbar">
-                <div className="navbar-logo">4X4R-US</div>
-                <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div className="navbar-hamburger" onClick={toggleMenu}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
-            </nav>
+            <div><Navbar/></div>
 
             <div className="hero-container">
                 <div className="hero-text">
                     <h1>Welcome to Our Adventure</h1>
                     <p>Discover the thrill of off-road exploration.</p>
-                    <button className='hero-button'>Contact Us</button>
+                    <Link className='hero-button' to='/contact'>Contact Us</Link>
                 </div>
             </div>
             <h2 className='brand-header'>Our Brands</h2>
@@ -87,8 +76,8 @@ function Home() {
             <div className="service-row">
                     {service.map((services, index) => (
                         <div key={index} className="service-item">
-                            <p>{services.name}</p>
                             <img src={services.imageSrc} alt={services.name} className="service-image" />
+                            <p>{services.name}</p>
                         </div>
                     ))}
                 </div>
