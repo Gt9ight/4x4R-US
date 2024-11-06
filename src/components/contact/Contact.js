@@ -1,6 +1,7 @@
 // ContactForm.js
 import React, { useState } from 'react';
 import { db, addDoc, collection } from '../../utilis/Firebase';
+import Navbar from '../navbar/Navbar';
 import './contact.css'
 
 const ContactForm = () => {
@@ -32,6 +33,7 @@ const ContactForm = () => {
   };
 
   return (
+    <div>
     <div className="contact-form-container">
       <h2>Contact Us</h2>
       {success && <p className="success-message">Message sent successfully!</p>}
@@ -71,6 +73,7 @@ const ContactForm = () => {
           {loading ? 'Sending...' : 'Send Message'}
         </button>
       </form>
+    </div>
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import React from 'react'
-import Navbar from '../navbar/Navbar'
+import React, { useState } from 'react';
+
 
 function About() {
   return (
     <div>
-        <Navbar/>
+
         <div>About</div>
     </div>
   )

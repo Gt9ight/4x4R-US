@@ -1,76 +1,81 @@
-/* Navbar Styles */
-.navbar {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: rgb(47, 47, 163);
+  color: white;
+  position: relative; /* Ensure it's positioned for z-index */
+  z-index: 10; 
+}
+.logo{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+nav a{
+  margin: 0 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: aqua;
+}
+
+header .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: aliceblue;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1024px){
+  header .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #263354;
-    color: white;
-    position: relative;
-    z-index: 1000; /* Add a high z-index */
-  }
-  
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  /* Navbar links styling */
-  .navbar-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    z-index: 1000; /* Ensure links also have a high z-index */
-  }
-  .navbar-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .navbar-links li a:hover {
-    color: #ddd;
-  }
-  
-  /* Hamburger menu styling */
-  .navbar-hamburger {
-    display: none;
     flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: rgb(47, 47, 163);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav{
+    transform: none;
+  }
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  nav a{
+    font-size: 1.5rem;
   }
   
-  .navbar-hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-links {
-      position: absolute;
-      top: 60px;
-      right: 0;
-      left: 100%; /* Keep it fully off-screen initially */
-      background-color: #333;
-      flex-direction: column;
-      width: 100%;
-      height: calc(100vh - 60px);
-      transition: left 0.3s ease-in-out;
-      z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  .navbar-links.open {
-    left: 0; /* Slide in when open */
-  }
-  
-    .navbar-links li {
-      text-align: center;
-      margin: 20px 0;
-    }
-  
-    .navbar-hamburger {
-      display: flex;
-    }
-  
-  }
+}

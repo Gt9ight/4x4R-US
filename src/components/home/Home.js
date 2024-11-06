@@ -9,18 +9,11 @@ import suspension from './suspension.webp'
 import gears from './gears.jpg'
 import wheel from './wheel.webp'
 import bumper from './bumper.png'
-import Navbar from '../navbar/Navbar';
+
 
 
 function Home() {
-    const [isOpen, setIsOpen] = useState(false);
 
-
-
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
 
     const mockBrands = [
         { name: 'Bilstein', imageSrc: Bilstein },
@@ -40,7 +33,7 @@ function Home() {
 
     return (
         <div>
-            <div><Navbar/></div>
+
 
             <div className="hero-container">
                 <div className="hero-text">
