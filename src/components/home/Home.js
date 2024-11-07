@@ -25,7 +25,7 @@ function Home() {
 
     const service = [
         { name: 'SUSPENSION', imageSrc: suspension, info: 'Upgrade your off-road ride with durable, high-performance suspensions for ultimate control, comfort, and precision on any terrain.' },
-        { name: 'TIRES & WHEEL', imageSrc: wheel, info: 'Gear up with rugged tires and wheels built for off-road power, grip, and durability—ready to tackle any terrain with confidence and control.' },
+        { name: 'TIRES, WHEELS, BALANCE, ETC.', imageSrc: wheel, info: 'Gear up with rugged tires and wheels built for off-road power, grip, and durability—ready to tackle any terrain with confidence and control.' },
         { name: 'GEARS & DRIVETRAIN', imageSrc: gears, info: 'Optimize your off-road performance with high-quality gears that deliver precision, durability, and efficiency for tackling any terrain with confidence.' },
         { name: 'BUMPERS, FENDERS, ETC.', imageSrc: bumper, info: 'Transform your off-road vehicle with robust bumpers and powerful lights designed for enhanced protection and visibility, ensuring safety and style on every adventure.' },
 

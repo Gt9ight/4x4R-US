@@ -30,6 +30,8 @@ body, html {
 
 }
 
+
+
 .hero-text {
   position: relative;
   z-index: 2; /* Ensure text is above the background */
@@ -203,7 +205,7 @@ overflow-x: auto;
 .service-row {
   display: flex;
   justify-content: center; /* Center the items */
-  gap: 50px; /* Increase gap between items */
+  gap: 40px; /* Increase gap between items */
   overflow-x: auto;
   padding: 50px 0;
   scrollbar-width: thin;
@@ -239,7 +241,7 @@ overflow-x: auto;
 }
 
 .service-image {
-  width: 200px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
   height: auto;
   display: block;
   margin: 0 auto;

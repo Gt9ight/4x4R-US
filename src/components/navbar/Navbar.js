@@ -16,6 +16,7 @@ function Navbar() {
         <nav ref={navRef}>
             <Link to='/' onClick={showNavbar}>Home</Link>
             <Link to='/about' onClick={showNavbar}>About</Link>
+            <Link to='/gallery' onClick={showNavbar}>Gallery</Link>
             <Link to='/services' onClick={showNavbar}>Services</Link>
             <Link to='/contact' onClick={showNavbar}>Contact</Link>
             <buutton className='nav-btn nav-close-btn' onClick={showNavbar}>

@@ -4,6 +4,7 @@ import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Navbar from "./components/navbar/Navbar";
+import Gallery from "./components/gallery/Gallery";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
