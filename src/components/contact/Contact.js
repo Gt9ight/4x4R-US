@@ -45,7 +45,7 @@ const ContactForm = () => {
         <input type="email" placeholder="Your Email" name="Email" required/>
         <input type="text" placeholder="Your Phone Number" name="Phone" required/>
         <h3>Tell us about your vehicle.</h3>
-        <input type="tel" placeholder="Make" name="Make" required/>
+        <input type="text" placeholder="Make" name="Make" required/>
         <input type="text" placeholder="Model" name="Model" required/>
         <input type="text" placeholder="Year" name="Year" required/>
 
