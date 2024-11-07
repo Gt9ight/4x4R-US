@@ -43,7 +43,7 @@ const ContactForm = () => {
       <form onSubmit={onSubmit} className="contact-form">
         <input type="text" placeholder="Your Full Name" name="Name" required/>
         <input type="email" placeholder="Your Email" name="Email" required/>
-        <input type="text" placeholder="Your Phone Number" name="Phone" required/>
+        <input type="tel" placeholder="Your Phone Number" name="Phone" required/>
         <h3>Tell us about your vehicle.</h3>
         <input type="text" placeholder="Make" name="Make" required/>
         <input type="text" placeholder="Model" name="Model" required/>
