@@ -1,12 +1,12 @@
 // ContactForm.js
 import React, { useState } from 'react';
-import { db, addDoc, collection } from '../../utilis/Firebase';
-import Navbar from '../navbar/Navbar';
 import './contact.css'
+import success from './success.jpg'
 
 const ContactForm = () => {
   const [result, setResult] = React.useState("");
   const [selectedValue, setSelectedValue] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -28,8 +28,14 @@ const ContactForm = () => {
     document.querySelector('.submit-btn').classList.remove('loading');
 
     if (data.success) {
+      setIsSubmitted(true);
       setResult("Form Submitted Successfully");
       event.target.reset();
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setResult("");
+        setSelectedValue('');
+      }, 10000);
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -39,8 +45,11 @@ const ContactForm = () => {
   return (
     <div>
       <div className="contact-form-container">
-      <h2>Contact Us</h2>
+
+      {!isSubmitted ? (
+
       <form onSubmit={onSubmit} className="contact-form">
+        <h2>Contact Us</h2>
         <input type="text" placeholder="Your Full Name" name="Name" required/>
         <input type="email" placeholder="Your Email" name="Email" required/>
         <input type="tel" placeholder="Your Phone Number" name="Phone" required/>
@@ -51,7 +60,7 @@ const ContactForm = () => {
 
         <h3>What can we do for you?</h3>
     <select className='form-option' value={selectedValue} onChange={handleChange}>
-      <option value="">Please select</option>
+      <option value="">Please select desired service</option>
       <option value="Suspension">Suspension</option>
       <option value="Bumper">Bumper, Fenders, Etc.</option>
       <option value="Drivetrain">Drivetrain</option>
@@ -64,8 +73,13 @@ const ContactForm = () => {
   {result === "" ? "Submit Form" : result}
 </button>
 
-      </form>
-
+</form>
+        ) : (
+          <div className="success-message">
+            <p>Form Submitted Successfully</p>
+            <img src={success} alt="Success" className="success-image" />
+          </div>
+        )}
       </div>
     </div>
   );

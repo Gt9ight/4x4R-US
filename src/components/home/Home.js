@@ -9,6 +9,7 @@ import suspension from './suspension.webp'
 import gears from './gears.jpg'
 import wheel from './wheel.webp'
 import bumper from './bumper.png'
+import StoreMap from '../map/StoreMap'
 
 
 
@@ -75,6 +76,17 @@ function Home() {
                     ))}
                 </div>
             </div>
+            <StoreMap/>
+            <footer className="footer-container">
+      <div className="footer-content">
+        <p>© 2024 Your Company Name. All rights reserved.</p>
+        <div className="footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </footer>
 
 
         </div>

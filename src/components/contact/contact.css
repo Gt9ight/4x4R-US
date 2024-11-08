@@ -10,6 +10,23 @@
   text-align: center;
 }
 
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust for vertical centering */
+  font-size: 24px; /* Make the text larger */
+  color: #34c759;
+  font-weight: bold;
+}
+
+.success-image {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 10px; /* Add some space if necessary */
+  mix-blend-mode: multiply;
+}
+
 .contact-form-container h2 {
   font-size: 28px;
   color: #333;
