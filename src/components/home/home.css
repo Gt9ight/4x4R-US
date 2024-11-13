@@ -339,24 +339,26 @@ overflow-x: auto;
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
   .Homeservice-header {
     font-size: 80px; /* Adjust font size for better readability */
     padding: 50px 20px; /* Reduce padding to fit smaller screens */
   }
+
   .Homeservice-container {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; /* Stack the cards vertically */
     align-items: center; /* Center-align the cards */
+    gap: 20px; /* Add spacing between cards */
   }
 
+  /* Set each Homeservice-item to take full width */
   .Homeservice-item {
     width: 100%; /* Full width for each card */
     margin: 15px 0; /* Add vertical spacing */
   }
 
   .Homeservice-inner {
-    height: 400px; /* Increase the height for larger display */
+    height: 400px; /* Adjust height for better visibility */
   }
 
   .service-name {
@@ -364,24 +366,23 @@ overflow-x: auto;
   }
 
   .Homeservice-front img {
-      width: 100%; /* Ensure it spans the width */
-      height: 100%; /* Fill the height of the container */
-      object-fit: cover; /* Ensure the image fills the container without distortion */
-    }
+    width: 100%; /* Ensure it spans the width */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+  }
 
   .Homeservice-back p {
     font-size: 1.2em; /* Keep the text size bigger for readability */
   }
 }
 
+/* Further adjustments for very small screens (max-width: 480px) */
 @media (max-width: 480px) {
-
   .Homeservice-header {
     font-size: 50px; /* Further reduce font size for smaller devices */
     padding: 30px 10px; /* Adjust padding for compact display */
     margin-top: 50px; /* Reduce top margin for smaller screens */
   }
-
 
   .Homeservice-container {
     display: flex;
@@ -390,7 +391,7 @@ overflow-x: auto;
   }
 
   .Homeservice-item {
-    width: 100%; /* Make each card full width */
+    width: 100%; /* Full width for each card */
     margin: 10px 0; /* Add some vertical spacing between cards */
   }
 
