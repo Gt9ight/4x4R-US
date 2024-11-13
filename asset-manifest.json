@@ -1,24 +1,30 @@
 {
   "files": {
-    "main.css": "/4x4R-US/static/css/main.972945e4.css",
-    "main.js": "/4x4R-US/static/js/main.5042fad2.js",
+    "main.css": "/4x4R-US/static/css/main.9859a676.css",
+    "main.js": "/4x4R-US/static/js/main.1ad6affd.js",
     "static/js/453.6a070f1d.chunk.js": "/4x4R-US/static/js/453.6a070f1d.chunk.js",
+    "static/media/suspension vid.mp4": "/4x4R-US/static/media/suspension vid.1acb0c145d523da5826d.mp4",
+    "static/media/bumpervid.mp4": "/4x4R-US/static/media/bumpervid.7a4e0bf2afe9c7006b66.mp4",
+    "static/media/drivetrain.mp4": "/4x4R-US/static/media/drivetrain.5d11c863aff9da455b17.mp4",
+    "static/media/hometirevid.mp4": "/4x4R-US/static/media/hometirevid.db1e944742f8be1374a3.mp4",
     "static/media/homehero.jpg": "/4x4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
     "static/media/visionimage.jpg": "/4x4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
+    "static/media/suspensionservices.png": "/4x4R-US/static/media/suspensionservices.1de3148d98c1d24d613e.png",
     "static/media/bumper.png": "/4x4R-US/static/media/bumper.03d61c6eb904dfddd31b.png",
     "static/media/wheel.webp": "/4x4R-US/static/media/wheel.1742815a4c52820ff21a.webp",
     "static/media/suspension.webp": "/4x4R-US/static/media/suspension.01bd114d230c015c2797.webp",
+    "static/media/servicegears.webp": "/4x4R-US/static/media/servicegears.088df0a82be63381b2b6.webp",
     "static/media/gears.jpg": "/4x4R-US/static/media/gears.0ed0ca5416a0b7c92bca.jpg",
     "static/media/construction.webp": "/4x4R-US/static/media/construction.4f2c63143ef75b2d23f1.webp",
     "static/media/rockcrawler.png": "/4x4R-US/static/media/rockcrawler.7b80e0fe969a1e4423c2.png",
     "static/media/success.jpg": "/4x4R-US/static/media/success.ce98b94f1ffeda028b06.jpg",
     "index.html": "/4x4R-US/index.html",
-    "main.972945e4.css.map": "/4x4R-US/static/css/main.972945e4.css.map",
-    "main.5042fad2.js.map": "/4x4R-US/static/js/main.5042fad2.js.map",
+    "main.9859a676.css.map": "/4x4R-US/static/css/main.9859a676.css.map",
+    "main.1ad6affd.js.map": "/4x4R-US/static/js/main.1ad6affd.js.map",
     "453.6a070f1d.chunk.js.map": "/4x4R-US/static/js/453.6a070f1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.972945e4.css",
-    "static/js/main.5042fad2.js"
+    "static/css/main.9859a676.css",
+    "static/js/main.1ad6affd.js"
   ]
 }
