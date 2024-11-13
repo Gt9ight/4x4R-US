@@ -136,7 +136,8 @@ overflow-x: auto;
   position: relative; /* Position relative for the pseudo-element */
   padding: 40px;
   border-radius: 8px;
-
+  width: 100%;
+  height: 440px;
   text-align: center;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Hide overflow for any pseudo-element */
@@ -155,8 +156,8 @@ overflow-x: auto;
 }
 
 .vision-container h2 {
-  font-size: 2rem;
-  color: #fafafa;
+  font-size: 4rem;
+  color: #df2b2b;
   margin-bottom: 15px;
   position: relative; /* Position relative to overlay */
   z-index: 2; /* Place above the overlay */
@@ -179,119 +180,285 @@ overflow-x: auto;
   background-position: center; /* Center the image */
 }
 
-
-.service-container {
-  padding: 50px;
-
+.Homeservice-header{
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
-  overflow-x: auto;
+  padding: 100px;
+  font-size: 150px;
+  color: #fff;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  margin-top: 100px;
+
 }
 
-.service-container h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
-}
 
-.service-header{
 
-  margin-bottom: 0px;
-
-  font-size: 2rem;
-  color: #333;
-  text-align: center;
-}
-
-.service-row {
+.Homeservice-container {
   display: flex;
-  justify-content: center; /* Center the items */
-  gap: 40px; /* Increase gap between items */
-  overflow-x: auto;
-  padding: 50px 0;
-  scrollbar-width: thin;
-  scrollbar-color: #888 #f5f5f5;
-  min-width: max-content;
-}
-
-.service-row::-webkit-scrollbar {
-  height: 8px;
-}
-
-.service-row::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-.service-item {
-  flex: 0 0 auto;
-  min-width: 150px;
-  height: 100px;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.2rem;
-  color: #333;
-  margin: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
+  background-color: #000;
+  gap: 30px;
+  padding: 20px;
+  
+  margin-bottom: 100px;
 }
 
-.service-item:hover {
-  transform: scale(1.1);
+.Homeservice-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
 }
 
-.service-image {
-  width: 150px; /* Adjust as needed */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-.service-item p {
-  text-align: center;
-  margin-top: 5px;
-
+.Homeservice-item {
+  width: calc(45% - 20px);
+  perspective: 1000px; /* Create a 3D perspective */
+  margin: 40px;
 }
 
-/* Responsive Styles */
+.Homeservice-inner {
+  width: 100%;
+  height: 550px; /* Increase the height */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
 
-/* Footer.css */
-.footer-container {
+.Homeservice-item:hover .Homeservice-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+.Homeservice-front,
+.Homeservice-back {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Match the new height */
+  backface-visibility: hidden; /* Hide the back when the front is shown */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.Homeservice-front {
+  
+  background-color: #ffffff;
+}
+
+.Homeservice-front::before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the image but behind the text */
+}
+
+.Homeservice-front img {
+  width: 100%;
+  height: auto; /* Adjust image height to maintain a balanced look */
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.service-name {
+  position: absolute; /* Position the text over the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to make the text perfectly centered */
+  font-size: 1.5em; /* Increase the font size for visibility */
+  font-weight: bold;
+  color: #ffffff; /* White text to contrast with the image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure text does not overflow */
+  z-index: 2;
+}
+
+.learn-more-button {
+  position: relative;
+  z-index: 10; /* Increase this if necessary */
+}
+
+.Homeservice-back {
   background-color: #333;
   color: #fff;
-  padding: 100px 0;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #000; /* Fallback color */
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.Homeservice-back::before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure the overlay is above the image but behind the text */
+}
+
+.backserviceTitle {
+  position: absolute;
+  top: 10px; /* Adjust as needed for vertical spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* Remove default margin */
+  text-align: center;
+  color: #fff; /* Adjust color for better visibility */
+  z-index: 2; /* Ensure it stays above any background video */
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure it stays in the background */
+}
+
+.Homeservice-back p {    
+  font-size: 2em;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .Homeservice-header {
+    font-size: 80px; /* Adjust font size for better readability */
+    padding: 50px 20px; /* Reduce padding to fit smaller screens */
+  }
+  .Homeservice-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align the cards */
+  }
+
+  .Homeservice-item {
+    width: 100%; /* Full width for each card */
+    margin: 15px 0; /* Add vertical spacing */
+  }
+
+  .Homeservice-inner {
+    height: 400px; /* Increase the height for larger display */
+  }
+
+  .service-name {
+    font-size: 1.5em; /* Make the text larger for emphasis */
+  }
+
+  .Homeservice-front img {
+      width: 100%; /* Ensure it spans the width */
+      height: 100%; /* Fill the height of the container */
+      object-fit: cover; /* Ensure the image fills the container without distortion */
+    }
+
+  .Homeservice-back p {
+    font-size: 1.2em; /* Keep the text size bigger for readability */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .Homeservice-header {
+    font-size: 50px; /* Further reduce font size for smaller devices */
+    padding: 30px 10px; /* Adjust padding for compact display */
+    margin-top: 50px; /* Reduce top margin for smaller screens */
+  }
+
+
+  .Homeservice-container {
+    display: flex;
+    flex-direction: column; /* Ensure the cards are stacked vertically */
+    align-items: center; /* Center-align the cards */
+  }
+
+  .Homeservice-item {
+    width: 100%; /* Make each card full width */
+    margin: 10px 0; /* Add some vertical spacing between cards */
+  }
+
+  .Homeservice-inner {
+    height: 300px; /* Adjust height to be larger for visibility */
+  }
+
+  .service-name {
+    font-size: 1.2em; /* Slightly larger for visibility */
+  }
+
+  .Homeservice-front img {
+    width: 100%; /* Full width for smaller screens */
+    height: 100%; /* Full height to fill the card */
+    object-fit: cover; /* Cover the space without distortion */
+  }
+
+  .Homeservice-back p {
+    font-size: 1em; /* Ensure text is readable */
+  }
+}
+
+
+.map-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  width: 100%; /* Full width of the screen */
+  max-width: 100vw; /* Ensures it stretches to the full viewport width */
+  margin: 50px 0; /* Vertical margin for spacing above/below */
+  border: 1px solid #ddd; /* Subtle border */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  position: relative;
 }
 
-.footer-links {
-  margin-top: 10px;
+.map-container h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
-.footer-links a {
-  color: #bbb;
-  margin: 0 15px;
-  text-decoration: none;
+.map-info {
+  background-color: #e0f2f1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 80%; /* Keeps the description box centered */
+  text-align: center;
 }
 
-.footer-links a:hover {
-  color: #fff;
+.map-info p {
+  color: #004d40;
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .footer-links a {
-    display: block;
-    margin: 5px 0;
-  }
+.StoreMap {
+  width: 100%;
+  height: 500px; /* Adjust map height as necessary */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
 }

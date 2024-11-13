@@ -5,6 +5,7 @@ import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Navbar from "./components/navbar/Navbar";
 import Gallery from "./components/gallery/Gallery";
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

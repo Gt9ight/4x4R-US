@@ -1,0 +1,136 @@
+/* Base container for services */
+.services-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.service-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Service item layout */
+.services-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #f9f9f9;
+  transition: transform 0.3s;
+}
+
+.services-items:hover {
+  transform: translateY(-10px);
+}
+
+/* Reverse layout for alternating services */
+.reverse-layout {
+  flex-direction: row-reverse;
+}
+
+/* Service image styling */
+.service-image {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.reverse-layout .service-image {
+  border-radius: 0 12px 12px 0;
+}
+
+/* Service info styling */
+.service-info {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.service-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.service-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Gradient backgrounds */
+.gradient-left {
+  background: linear-gradient(to right, #ffffff, #e6f7ff);
+}
+
+.gradient-right {
+  background: linear-gradient(to left, #ffffff, #e6f7ff);
+}
+
+/* Subtle animations */
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services-items {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-image {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .reverse-layout .service-image {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .service-info {
+    padding: 1rem;
+  }
+
+  .service-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-info p {
+    font-size: 0.9rem;
+  }
+}

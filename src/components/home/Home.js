@@ -10,8 +10,10 @@ import gears from './gears.jpg'
 import wheel from './wheel.webp'
 import bumper from './bumper.png'
 import StoreMap from '../map/StoreMap'
-
-
+import bumpervid from './bumpervid.mp4'
+import tirevid from './hometirevid.mp4'
+import susvid from './suspension vid.mp4'
+import drivetrain from './drivetrain.mp4'
 
 function Home() {
 
@@ -24,13 +26,17 @@ function Home() {
 
     ];
 
-    const service = [
-        { name: 'SUSPENSION', imageSrc: suspension, info: 'Upgrade your off-road ride with durable, high-performance suspensions for ultimate control, comfort, and precision on any terrain.' },
-        { name: 'TIRES, WHEELS, BALANCE, ETC.', imageSrc: wheel, info: 'Gear up with rugged tires and wheels built for off-road power, grip, and durability—ready to tackle any terrain with confidence and control.' },
-        { name: 'GEARS & DRIVETRAIN', imageSrc: gears, info: 'Optimize your off-road performance with high-quality gears that deliver precision, durability, and efficiency for tackling any terrain with confidence.' },
-        { name: 'BUMPERS, FENDERS, ETC.', imageSrc: bumper, info: 'Transform your off-road vehicle with robust bumpers and powerful lights designed for enhanced protection and visibility, ensuring safety and style on every adventure.' },
+    const homeservice = [
+        { homename: 'SUSPENSION', imageSrc: suspension, vidSrc: susvid, homeinfo: 'Upgrade your off-road ride with durable, high-performance suspensions for ultimate control, comfort, and precision on any terrain.' },
+        { homename: 'TIRES, WHEELS, BALANCE, ETC.', imageSrc: wheel, vidSrc: tirevid, homeinfo: 'Gear up with rugged tires and wheels built for off-road power, grip, and durability—ready to tackle any terrain with confidence and control.' },
+        { homename: 'GEARS & DRIVETRAIN', imageSrc: gears, vidSrc: drivetrain, homeinfo: 'Optimize your off-road performance with high-quality gears that deliver precision, durability, and efficiency for tackling any terrain with confidence.' },
+        { homename: 'BUMPERS, FENDERS, ETC.', imageSrc: bumper, vidSrc: bumpervid,  homeinfo: 'Transform your off-road vehicle with robust bumpers and powerful lights designed for enhanced protection and visibility, ensuring safety and style on every adventure.' },
 
     ];
+
+    
+
+    
 
     return (
         <div>
@@ -64,29 +70,42 @@ function Home() {
             </div>
 
 
-            <h2 className='service-header'>Our Services</h2>
-            <div className="service-container">
+            <h2 className='Homeservice-header'>Our Services</h2>
+            <div className="Homeservice-container">
                 
-            <div className="service-row">
-                    {service.map((services, index) => (
-                        <div key={index} className="service-item">
-                            <img src={services.imageSrc} alt={services.name} className="service-image" />
-                            <p>{services.name}</p>
-                        </div>
-                    ))}
+            <div className="Homeservice-row">
+            {homeservice.map((services, index) => (
+            <div key={index} className="Homeservice-item">
+                <div className="Homeservice-inner">
+                    <div className="Homeservice-front">
+                        <img src={services.imageSrc} alt={services.homename} />
+                        <p className="service-name">{services.homename}</p>
+                    </div>
+                    <div className="Homeservice-back">
+                        <h2 className='backserviceTitle'>{services.homename}</h2>
+                    {services.vidSrc ? (
+                        <video className="background-video" autoPlay loop muted>
+                            <source src={services.vidSrc} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    ) : null}
+                    <p>{services.homeinfo}</p>
+                    
+                </div>
                 </div>
             </div>
-            <StoreMap/>
-            <footer className="footer-container">
-      <div className="footer-content">
-        <p>© 2024 Your Company Name. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-          <a href="/contact">Contact Us</a>
-        </div>
-      </div>
-    </footer>
+        ))}
+                </div>
+            </div>
+            <div className='map-container'>
+    <h1>COME VISIT US</h1>
+    <div className="map-info">
+        <p>Discover our location and stop by for exclusive experiences!</p>
+    </div>
+    <StoreMap />
+</div>
+            
+
 
 
         </div>
