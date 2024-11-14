@@ -242,6 +242,7 @@ overflow-x: auto;
   backface-visibility: hidden; /* Hide the back when the front is shown */
   border-radius: 15px;
   overflow: hidden;
+  z-index: 1; 
 }
 
 .Homeservice-front {
@@ -374,7 +375,12 @@ overflow-x: auto;
   .Homeservice-back p {
     font-size: 1.2em; /* Keep the text size bigger for readability */
   }
+
+  .Homeservice-front, .Homeservice-back {
+    outline: 1px solid red; /* Temporary to visually debug */
+  }
 }
+
 
 /* Further adjustments for very small screens (max-width: 480px) */
 @media (max-width: 480px) {
