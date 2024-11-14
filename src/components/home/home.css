@@ -212,6 +212,7 @@ overflow-x: auto;
   justify-content: space-between;
   gap: 30px;
   width: 100%;
+  background-color: #000;
 }
 
 .Homeservice-item {
@@ -338,6 +339,58 @@ overflow-x: auto;
   z-index: 1;
 }
 
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Button Styling */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Hover Effects */
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Optional: Add focus styles for accessibility */
+.carousel-button:focus {
+  outline: 2px solid #fff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .Homeservice-header {
@@ -345,21 +398,39 @@ overflow-x: auto;
     padding: 50px 20px; /* Reduce padding to fit smaller screens */
   }
 
+  .carousel-button {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  
+    .carousel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+
   .Homeservice-container {
     display: flex;
-    flex-direction: column; /* Stack the cards vertically */
-    align-items: center; /* Center-align the cards */
-    gap: 20px; /* Add spacing between cards */
-  }
-
+    
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+}
   /* Set each Homeservice-item to take full width */
   .Homeservice-item {
-    width: 100%; /* Full width for each card */
-    margin: 15px 0; /* Add vertical spacing */
-  }
+    min-width: 80%; /* Each item takes up 80% of the viewport width */
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+.Homeservice-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on mobile */
+}
 
   .Homeservice-inner {
-    height: 400px; /* Adjust height for better visibility */
+    height: auto; /* Adjust height for better visibility */
   }
 
   .service-name {
@@ -375,10 +446,9 @@ overflow-x: auto;
   .Homeservice-back p {
     font-size: 1.2em; /* Keep the text size bigger for readability */
   }
+  
 
-  .Homeservice-front, .Homeservice-back {
-    outline: 1px solid red; /* Temporary to visually debug */
-  }
+
 }
 
 
