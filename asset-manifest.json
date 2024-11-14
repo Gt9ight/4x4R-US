@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/4x4R-US/static/css/main.e1d58bbd.css",
-    "main.js": "/4x4R-US/static/js/main.1ad6affd.js",
+    "main.css": "/4x4R-US/static/css/main.db286184.css",
+    "main.js": "/4x4R-US/static/js/main.a262272a.js",
     "static/js/453.6a070f1d.chunk.js": "/4x4R-US/static/js/453.6a070f1d.chunk.js",
     "static/media/suspension vid.mp4": "/4x4R-US/static/media/suspension vid.1acb0c145d523da5826d.mp4",
     "static/media/bumpervid.mp4": "/4x4R-US/static/media/bumpervid.7a4e0bf2afe9c7006b66.mp4",
@@ -9,6 +9,7 @@
     "static/media/hometirevid.mp4": "/4x4R-US/static/media/hometirevid.db1e944742f8be1374a3.mp4",
     "static/media/homehero.jpg": "/4x4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
     "static/media/visionimage.jpg": "/4x4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
+    "static/media/offtire.png": "/4x4R-US/static/media/offtire.58dc425dec9213ab83f8.png",
     "static/media/suspensionservices.png": "/4x4R-US/static/media/suspensionservices.1de3148d98c1d24d613e.png",
     "static/media/bumper.png": "/4x4R-US/static/media/bumper.03d61c6eb904dfddd31b.png",
     "static/media/wheel.webp": "/4x4R-US/static/media/wheel.1742815a4c52820ff21a.webp",
@@ -19,12 +20,12 @@
     "static/media/rockcrawler.png": "/4x4R-US/static/media/rockcrawler.7b80e0fe969a1e4423c2.png",
     "static/media/success.jpg": "/4x4R-US/static/media/success.ce98b94f1ffeda028b06.jpg",
     "index.html": "/4x4R-US/index.html",
-    "main.e1d58bbd.css.map": "/4x4R-US/static/css/main.e1d58bbd.css.map",
-    "main.1ad6affd.js.map": "/4x4R-US/static/js/main.1ad6affd.js.map",
+    "main.db286184.css.map": "/4x4R-US/static/css/main.db286184.css.map",
+    "main.a262272a.js.map": "/4x4R-US/static/js/main.a262272a.js.map",
     "453.6a070f1d.chunk.js.map": "/4x4R-US/static/js/453.6a070f1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1d58bbd.css",
-    "static/js/main.1ad6affd.js"
+    "static/css/main.db286184.css",
+    "static/js/main.a262272a.js"
   ]
 }
