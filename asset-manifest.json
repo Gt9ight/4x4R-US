@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/4x4R-US/static/css/main.db286184.css",
+    "main.css": "/4x4R-US/static/css/main.c907d41c.css",
     "main.js": "/4x4R-US/static/js/main.33c40b86.js",
     "static/js/453.6a070f1d.chunk.js": "/4x4R-US/static/js/453.6a070f1d.chunk.js",
     "static/media/suspension vid.mp4": "/4x4R-US/static/media/suspension vid.1acb0c145d523da5826d.mp4",
@@ -20,12 +20,12 @@
     "static/media/rockcrawler.png": "/4x4R-US/static/media/rockcrawler.7b80e0fe969a1e4423c2.png",
     "static/media/success.jpg": "/4x4R-US/static/media/success.ce98b94f1ffeda028b06.jpg",
     "index.html": "/4x4R-US/index.html",
-    "main.db286184.css.map": "/4x4R-US/static/css/main.db286184.css.map",
+    "main.c907d41c.css.map": "/4x4R-US/static/css/main.c907d41c.css.map",
     "main.33c40b86.js.map": "/4x4R-US/static/js/main.33c40b86.js.map",
     "453.6a070f1d.chunk.js.map": "/4x4R-US/static/js/453.6a070f1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db286184.css",
+    "static/css/main.c907d41c.css",
     "static/js/main.33c40b86.js"
   ]
 }
