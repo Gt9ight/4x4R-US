@@ -394,61 +394,70 @@ overflow-x: auto;
 /* Responsive Design */
 @media (max-width: 768px) {
   .Homeservice-header {
-    font-size: 80px; /* Adjust font size for better readability */
-    padding: 50px 20px; /* Reduce padding to fit smaller screens */
+    font-size: 50px; /* Adjust font size */
+    padding: 20px; /* Reduce padding */
+    margin-top: 50px; /* Reduced margin for smaller screens */
   }
 
-  .carousel-button {
-    font-size: 20px;
-    padding: 8px;
-  }
-
-  
-    .carousel-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-
-  .Homeservice-container {
+  .carousel-container {
     display: flex;
-    
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    gap: 10px;
-    -webkit-overflow-scrolling: touch;
-}
-  /* Set each Homeservice-item to take full width */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+  }
+
   .Homeservice-item {
-    min-width: 80%; /* Each item takes up 80% of the viewport width */
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-}
-.Homeservice-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar on mobile */
-}
+    width: 100%; /* Full width for mobile */
+    margin: 10px 0; /* Vertical spacing */
+    flex: 0 0 auto; /* Ensure items do not shrink */
+    scroll-snap-align: start;
+  }
 
   .Homeservice-inner {
-    height: auto; /* Adjust height for better visibility */
-  }
-
-  .service-name {
-    font-size: 1.5em; /* Make the text larger for emphasis */
+    height: 400px; /* Adjust height */
+    border-radius: 10px; /* Softer corners */
   }
 
   .Homeservice-front img {
-    width: 100%; /* Ensure it spans the width */
-    height: 100%; /* Fill the height of the container */
-    object-fit: cover; /* Ensure the image fills the container without distortion */
+    width: 100%; /* Fill the container */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .service-name {
+    font-size: 1.2em; /* Larger text for readability */
+    padding: 10px 5px; /* Add padding */
+  }
+
+  .Homeservice-back {
+    padding: 15px; /* More padding for better readability */
+    text-align: left; /* Align text to the left */
   }
 
   .Homeservice-back p {
-    font-size: 1.2em; /* Keep the text size bigger for readability */
+    font-size: 1em; /* Maintain readability */
+    line-height: 1.4; /* Space text for easier reading */
   }
-  
 
+  .carousel-button {
+    font-size: 20px; /* Resize buttons */
+    padding: 8px; /* Smaller padding */
+  }
 
+  .carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on mobile */
+  }
+
+  .Homeservice-container {
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    flex-direction: row; /* Stack items horizontally */
+    gap: 15px; /* Reduce gap for better use of space */
+  }
+
+  .background-video {
+    display: none; /* Hide video backgrounds for simpler design */
+  }
 }
 
 
