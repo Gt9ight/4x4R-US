@@ -462,9 +462,7 @@ overflow-x: auto;
     gap: 15px; /* Reduce gap for better use of space */
   }
 
-  .background-video {
-    display: none; /* Hide video backgrounds for simpler design */
-  }
+
 }
 
 
