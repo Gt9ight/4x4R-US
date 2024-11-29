@@ -206,6 +206,10 @@ overflow-x: auto;
   margin-bottom: 100px;
 }
 
+.Homeservice-inner:hover .background-video {
+  pointer-events: auto; /* Re-enable interactions when hovered */
+}
+
 .Homeservice-row {
   display: flex;
   flex-wrap: wrap;
@@ -342,6 +346,7 @@ overflow-x: auto;
   height: 100%;
   object-fit: cover;
   z-index: -1; /* Ensure it stays in the background */
+  pointer-events: none;
 }
 
 .Homeservice-back p {    
