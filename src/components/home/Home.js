@@ -4,7 +4,7 @@ import './home.css'; // Ensure this file includes the new styles
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import StoreMap from '../map/StoreMap';
 import Bilstein from './bilstein.png'
 import Rockcrawler from './rockcrawler.png'
 import Fox from './fox.png'
@@ -167,6 +167,12 @@ function Home() {
                 </div>
             )}
         </div>
+            <div className='store-map'>
+                 <h1 className="location-heading">Our Location</h1>
+                <p>Find us at the following address:</p>
+            <StoreMap/>
+            </div>
+        
         </div>
     );
 }
