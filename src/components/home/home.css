@@ -231,6 +231,8 @@ overflow-x: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .Homeservice-item:hover .Homeservice-inner {
   transform: rotateY(180deg); /* Flip the card */
 }
@@ -247,10 +249,14 @@ overflow-x: auto;
 }
 
 .Homeservice-front {
-  
-  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide front side when flipped */
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 2; /* Ensure the front is above the back side */
 }
-
 .Homeservice-front::before {
   content: ""; /* Create a pseudo-element */
   position: absolute;
@@ -270,6 +276,8 @@ overflow-x: auto;
 }
 
 .service-name {
+  width: 100%;
+  height: 100%;
   position: absolute; /* Position the text over the image */
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
@@ -293,6 +301,7 @@ overflow-x: auto;
   z-index: 1;  
   color: #fff;
   transform: rotateY(180deg);
+  backface-visibility: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,6 +433,10 @@ overflow-x: auto;
     border-radius: 10px; /* Softer corners */
   }
 
+  .Homeservice-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
   .Homeservice-front img {
     width: 100%; /* Fill the container */
     height: 100%; /* Fill the container */
@@ -487,6 +500,10 @@ overflow-x: auto;
 
   .Homeservice-inner {
     height: 300px; /* Adjust height to be larger for visibility */
+  }
+
+  .Homeservice-inner.flipped {
+    transform: rotateY(180deg);
   }
 
   .service-name {

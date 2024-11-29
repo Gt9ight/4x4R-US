@@ -55,12 +55,12 @@ function Home() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [flipped, setFlipped] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -72,6 +72,11 @@ function Home() {
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex === homeservice.length - 1 ? 0 : prevIndex + 1));
     };
+
+    const handleCardFlip = () => {
+        setFlipped(!flipped); // Toggle the flipped state when the card is clicked
+    };
+    
 
     return (
         <div>
@@ -102,57 +107,57 @@ function Home() {
             </div>
 
             <div>
-                <h2 className='Homeservice-header'>Our Services</h2>
-                {isMobile ? (
-    <div className="carousel-container">
-        <div className="carousel-card">
-            <div className="Homeservice-item" key={currentIndex}>
-                <div className="Homeservice-inner">
-                    <div className="Homeservice-front">
-                        <img src={homeservice[currentIndex].imageSrc} alt={homeservice[currentIndex].homename} />
-                        <p className="service-name">{homeservice[currentIndex].homename}</p>
+            <h2 className='Homeservice-header'>Our Services</h2>
+            {isMobile ? (
+                <div className="carousel-container">
+                    <div className="carousel-card" onClick={handleCardFlip}>
+                        <div className="Homeservice-item">
+                            <div className={`Homeservice-inner ${flipped ? 'flipped' : ''}`}>
+                                <div className="Homeservice-front">
+                                    <img src={homeservice[currentIndex].imageSrc} alt={homeservice[currentIndex].homename} />
+                                    <p className="service-name">{homeservice[currentIndex].homename}</p>
+                                </div>
+                                <div className="Homeservice-back">
+                                    <h2 className='backserviceTitle'>{homeservice[currentIndex].homename}</h2>
+                                    {flipped && homeservice[currentIndex].vidSrc && (
+                                        <video className="background-video" autoPlay loop muted>
+                                            <source src={homeservice[currentIndex].vidSrc} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
+                                    <p>{homeservice[currentIndex].homeinfo}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="Homeservice-back">
-                        <h2 className='backserviceTitle'>{homeservice[currentIndex].homename}</h2>
-                        {homeservice[currentIndex].vidSrc && (
-                            <video className="background-video" autoPlay loop muted>
-                                <source src={homeservice[currentIndex].vidSrc} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        )}
-                        <p>{homeservice[currentIndex].homeinfo}</p>
-                    </div>
+                    <button className="carousel-button prev" onClick={handlePrev}>‹</button>
+                    <button className="carousel-button next" onClick={handleNext}>›</button>
                 </div>
-            </div>
+            ) : (
+                <div className="Homeservice-row">
+                    {homeservice.map((services, index) => (
+                        <div key={index} className="Homeservice-item">
+                            <div className="Homeservice-inner">
+                                <div className="Homeservice-front">
+                                    <img src={services.imageSrc} alt={services.homename} />
+                                    <p className="service-name">{services.homename}</p>
+                                </div>
+                                <div className="Homeservice-back">
+                                    <h2 className='backserviceTitle'>{services.homename}</h2>
+                                    {services.vidSrc && (
+                                        <video className="background-video" autoPlay loop muted>
+                                            <source src={services.vidSrc} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    )}
+                                    <p>{services.homeinfo}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
-        <button className="carousel-button prev" onClick={handlePrev}>‹</button>
-        <button className="carousel-button next" onClick={handleNext}>›</button>
-    </div>
-) : (
-    <div className="Homeservice-row">
-        {homeservice.map((services, index) => (
-            <div key={index} className="Homeservice-item">
-                <div className="Homeservice-inner">
-                    <div className="Homeservice-front">
-                        <img src={services.imageSrc} alt={services.homename} />
-                        <p className="service-name">{services.homename}</p>
-                    </div>
-                    <div className="Homeservice-back">
-                        <h2 className='backserviceTitle'>{services.homename}</h2>
-                        {services.vidSrc && (
-                            <video className="background-video" autoPlay loop muted>
-                                <source src={services.vidSrc} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        )}
-                        <p>{services.homeinfo}</p>
-                    </div>
-                </div>
-            </div>
-        ))}
-    </div>
-)}
-            </div>
         </div>
     );
 }
