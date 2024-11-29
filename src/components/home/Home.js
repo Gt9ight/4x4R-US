@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css'; // Ensure this file includes the new styles
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import Bilstein from './bilstein.png'
 import Rockcrawler from './rockcrawler.png'
 import Fox from './fox.png'
@@ -77,6 +81,15 @@ function Home() {
         setFlipped(!flipped); // Toggle the flipped state when the card is clicked
     };
     
+    
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      };
+   
 
     return (
         <div>
@@ -109,30 +122,26 @@ function Home() {
             <div>
             <h2 className='Homeservice-header'>Our Services</h2>
             {isMobile ? (
-                <div className="carousel-container">
-                    <div className="carousel-card" onClick={handleCardFlip}>
-                        <div className="Homeservice-item">
-                            <div className={`Homeservice-inner ${flipped ? 'flipped' : ''}`}>
-                                <div className="Homeservice-front">
-                                    <img src={homeservice[currentIndex].imageSrc} alt={homeservice[currentIndex].homename} />
-                                    <p className="service-name">{homeservice[currentIndex].homename}</p>
-                                </div>
-                                <div className="Homeservice-back">
-                                    <h2 className='backserviceTitle'>{homeservice[currentIndex].homename}</h2>
-                                    {flipped && homeservice[currentIndex].vidSrc && (
-                                        <video className="background-video" autoPlay loop muted>
-                                            <source src={homeservice[currentIndex].vidSrc} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    )}
-                                    <p>{homeservice[currentIndex].homeinfo}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button className="carousel-button prev" onClick={handlePrev}>‹</button>
-                    <button className="carousel-button next" onClick={handleNext}>›</button>
-                </div>
+              <div className='services'>
+              <div className='serv-container'>
+              <Slider {...settings}>
+                  {
+                      homeservice.map((item,index)=>{
+                          return(
+                              <div key={index}>
+                                  <div>
+                                      <img className='servImg'src={item.imageSrc}/>
+                                  </div>
+                                  <div className='title-container'>
+                                      <p className='servTitle'>{item.homename}</p>
+                                  </div>
+                              </div>
+                          )
+                      })
+                  }
+                  </Slider>
+              </div>
+          </div>
             ) : (
                 <div className="Homeservice-row">
                     {homeservice.map((services, index) => (

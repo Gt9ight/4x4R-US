@@ -356,176 +356,46 @@ overflow-x: auto;
 
 
 
-.carousel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #000;
-  padding-bottom: 50px;
-  padding-top: 50px;
+.services {
+  height: 70vh;
+  background-color: #000000;
 }
 
-.carousel-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.serv-container {
+  height: 60px; /* Increased the height for better spacing */
+  width: 75%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center; /* Centers content inside the container */
+  
 }
 
-/* Button Styling */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
+.servImg {
+  width: 350px;  /* Increased the image size */
+  height: 350px; /* Increased the image size */
+  display: block; /* Makes the image a block-level element */
+  margin: 0 auto; /* Centers the image horizontally */
+  background-color: #ddd;
+}
+
+.servTitle {
+  color: #ddd;
+  font-size: 2rem;  /* Increased font size */
+}
+
+.title-container {
   padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10;
+  font-size: 1.5rem;  /* Added font size for title container */
 }
 
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-/* Hover Effects */
-.carousel-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* Optional: Add focus styles for accessibility */
-.carousel-button:focus {
-  outline: 2px solid #fff;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .Homeservice-header {
     font-size: 50px; /* Adjust font size */
     padding: 20px; /* Reduce padding */
     margin-top: 50px; /* Reduced margin for smaller screens */
   }
-
-  .carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Full width */
-    padding: 0; /* Remove padding */
-  }
-
-  .Homeservice-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;  /* Adjust the height as needed */
-    overflow: hidden;  /* Prevent overflow if the video is larger than the container */
 }
-
-  .Homeservice-inner {
-    height: 400px; /* Adjust height */
-    border-radius: 10px; /* Softer corners */
-  }
-
-  .Homeservice-inner.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .Homeservice-front img {
-    width: 100%; /* Fill the container */
-    height: 100%; /* Fill the container */
-    object-fit: cover; /* Maintain aspect ratio */
-  }
-
-  .service-name {
-    font-size: 1.2em; /* Larger text for readability */
-    padding: 10px 5px; /* Add padding */
-  }
-
-  .Homeservice-back {
-    position: relative;
-    z-index: 1;  /* Make sure the content is on top of the video */
-    padding: 20px;
-    color: white; /* Adjust text color for visibility against the background */
-}
-
-  .Homeservice-back p {
-    font-size: 1em; /* Maintain readability */
-    line-height: 1.4; /* Space text for easier reading */
-  }
-
-  .carousel-button {
-    font-size: 20px; /* Resize buttons */
-    padding: 8px; /* Smaller padding */
-  }
-
-  .carousel-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar on mobile */
-  }
-
-  .Homeservice-container {
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    flex-direction: row; /* Stack items horizontally */
-    gap: 15px; /* Reduce gap for better use of space */
-  }
-
-
-}
-
-
-/* Further adjustments for very small screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .Homeservice-header {
-    font-size: 50px; /* Further reduce font size for smaller devices */
-    padding: 30px 10px; /* Adjust padding for compact display */
-    margin-top: 50px; /* Reduce top margin for smaller screens */
-  }
-
-  .Homeservice-container {
-    display: flex;
-    flex-direction: column; /* Ensure the cards are stacked vertically */
-    align-items: center; /* Center-align the cards */
-  }
-
-  .Homeservice-item {
-    width: 100%; /* Full width for each card */
-    margin: 10px 0; /* Add some vertical spacing between cards */
-  }
-
-  .Homeservice-inner {
-    height: 300px; /* Adjust height to be larger for visibility */
-  }
-
-  .Homeservice-inner.flipped {
-    transform: rotateY(180deg);
-  }
-
-  .service-name {
-    font-size: 1.2em; /* Slightly larger for visibility */
-  }
-
-  .Homeservice-front img {
-    width: 100%; /* Full width for smaller screens */
-    height: 100%; /* Full height to fill the card */
-    object-fit: cover; /* Cover the space without distortion */
-  }
-
-  .Homeservice-back p {
-    font-size: 1em; /* Ensure text is readable */
-  }
-}
-
 
 .map-container {
   display: flex;
