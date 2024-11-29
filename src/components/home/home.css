@@ -290,6 +290,7 @@ overflow-x: auto;
 
 .Homeservice-back {
   background-color: #333;
+  z-index: 1;  
   color: #fff;
   transform: rotateY(180deg);
   display: flex;
@@ -338,6 +339,8 @@ overflow-x: auto;
   font-size: 2em;
   z-index: 1;
 }
+
+
 
 .carousel-container {
   position: relative;
@@ -408,11 +411,13 @@ overflow-x: auto;
   }
 
   .Homeservice-item {
-    width: 100%; /* Full width for mobile */
-    margin: 10px 0; /* Vertical spacing */
-    flex: 0 0 auto; /* Ensure items do not shrink */
-    scroll-snap-align: start;
-  }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;  /* Adjust the height as needed */
+    overflow: hidden;  /* Prevent overflow if the video is larger than the container */
+}
 
   .Homeservice-inner {
     height: 400px; /* Adjust height */
@@ -431,9 +436,11 @@ overflow-x: auto;
   }
 
   .Homeservice-back {
-    padding: 15px; /* More padding for better readability */
-    text-align: left; /* Align text to the left */
-  }
+    position: relative;
+    z-index: 1;  /* Make sure the content is on top of the video */
+    padding: 20px;
+    color: white; /* Adjust text color for visibility against the background */
+}
 
   .Homeservice-back p {
     font-size: 1em; /* Maintain readability */

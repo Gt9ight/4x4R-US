@@ -9,7 +9,6 @@ import suspension from './suspension.webp'
 import gears from './gears.jpg'
 import wheel from './offtire.png'
 import bumper from './bumper.png'
-import StoreMap from '../map/StoreMap'
 import bumpervid from './bumpervid.mp4'
 import tirevid from './hometirevid.mp4'
 import susvid from './suspension vid.mp4'
@@ -18,7 +17,7 @@ import drivetrain from './drivetrain.mp4'
 
 
 function Home() {
-    const homeserviceContainerRef = useRef(null);
+   
 
     const mockBrands = [
         { name: 'Bilstein', imageSrc: Bilstein },
