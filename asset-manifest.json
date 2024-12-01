@@ -1,16 +1,30 @@
 {
   "files": {
-    "main.css": "/4x4R-US/static/css/main.611b1f19.css",
-    "main.js": "/4x4R-US/static/js/main.6f44b008.js",
-    "static/js/453.6a070f1d.chunk.js": "/4x4R-US/static/js/453.6a070f1d.chunk.js",
+    "main.css": "/4x4R-US/static/css/main.b308f172.css",
+    "main.js": "/4x4R-US/static/js/main.e0bce309.js",
+    "static/js/453.7b1cb427.chunk.js": "/4x4R-US/static/js/453.7b1cb427.chunk.js",
     "static/media/suspension vid.mp4": "/4x4R-US/static/media/suspension vid.1acb0c145d523da5826d.mp4",
     "static/media/bumpervid.mp4": "/4x4R-US/static/media/bumpervid.7a4e0bf2afe9c7006b66.mp4",
     "static/media/drivetrain.mp4": "/4x4R-US/static/media/drivetrain.5d11c863aff9da455b17.mp4",
+    "static/media/IMG_7905.jpg": "/4x4R-US/static/media/IMG_7905.e9f713dc8aebc555c1e7.jpg",
     "static/media/hometirevid.mp4": "/4x4R-US/static/media/hometirevid.db1e944742f8be1374a3.mp4",
+    "static/media/IMG_7907.jpg": "/4x4R-US/static/media/IMG_7907.b0613ef01fd4397c960e.jpg",
     "static/media/homehero.jpg": "/4x4R-US/static/media/homehero.66bc917c4062b4987327.jpg",
     "static/media/visionimage.jpg": "/4x4R-US/static/media/visionimage.ee5e5a9820ff0542e1be.jpg",
+    "static/media/IMG_8372.jpg": "/4x4R-US/static/media/IMG_8372.db609ccfa6e6ddda1489.jpg",
+    "static/media/IMG_7908.jpg": "/4x4R-US/static/media/IMG_7908.f99eb293dcb6e4e0f198.jpg",
+    "static/media/IMG_8189.jpg": "/4x4R-US/static/media/IMG_8189.8da98bd052c33a8c67f8.jpg",
+    "static/media/IMG_8241.jpg": "/4x4R-US/static/media/IMG_8241.d7cf1538465494fb85ca.jpg",
+    "static/media/IMG_8187.jpg": "/4x4R-US/static/media/IMG_8187.0f6fa444b8ec19440fad.jpg",
+    "static/media/IMG_8518.jpg": "/4x4R-US/static/media/IMG_8518.233652591c6eaa723c42.jpg",
+    "static/media/IMG_8242.jpg": "/4x4R-US/static/media/IMG_8242.8a5e8fca96aac8ce614e.jpg",
+    "static/media/IMG_8202.jpg": "/4x4R-US/static/media/IMG_8202.e3eee04b39082c5a89a5.jpg",
+    "static/media/IMG_8188.jpg": "/4x4R-US/static/media/IMG_8188.9d5e86fcd62e856084ec.jpg",
+    "static/media/IMG_8524.jpg": "/4x4R-US/static/media/IMG_8524.d363656b0aefa5431a4c.jpg",
+    "static/media/herogallery.jpg": "/4x4R-US/static/media/herogallery.20629b7def7b46262a75.jpg",
     "static/media/offtire.png": "/4x4R-US/static/media/offtire.58dc425dec9213ab83f8.png",
     "static/media/suspensionservices.png": "/4x4R-US/static/media/suspensionservices.1de3148d98c1d24d613e.png",
+    "static/media/instagram.png": "/4x4R-US/static/media/instagram.85efc683a642e4542b57.png",
     "static/media/bumper.png": "/4x4R-US/static/media/bumper.03d61c6eb904dfddd31b.png",
     "static/media/wheel.webp": "/4x4R-US/static/media/wheel.1742815a4c52820ff21a.webp",
     "static/media/suspension.webp": "/4x4R-US/static/media/suspension.01bd114d230c015c2797.webp",
@@ -19,17 +33,18 @@
     "static/media/construction.webp": "/4x4R-US/static/media/construction.4f2c63143ef75b2d23f1.webp",
     "static/media/rockcrawler.png": "/4x4R-US/static/media/rockcrawler.7b80e0fe969a1e4423c2.png",
     "static/media/success.jpg": "/4x4R-US/static/media/success.ce98b94f1ffeda028b06.jpg",
+    "static/media/tiktok.webp": "/4x4R-US/static/media/tiktok.2b1fb15cee8a8211d6d3.webp",
     "static/media/slick.svg": "/4x4R-US/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/4x4R-US/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/4x4R-US/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/4x4R-US/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/4x4R-US/index.html",
-    "main.611b1f19.css.map": "/4x4R-US/static/css/main.611b1f19.css.map",
-    "main.6f44b008.js.map": "/4x4R-US/static/js/main.6f44b008.js.map",
-    "453.6a070f1d.chunk.js.map": "/4x4R-US/static/js/453.6a070f1d.chunk.js.map"
+    "main.b308f172.css.map": "/4x4R-US/static/css/main.b308f172.css.map",
+    "main.e0bce309.js.map": "/4x4R-US/static/js/main.e0bce309.js.map",
+    "453.7b1cb427.chunk.js.map": "/4x4R-US/static/js/453.7b1cb427.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.611b1f19.css",
-    "static/js/main.6f44b008.js"
+    "static/css/main.b308f172.css",
+    "static/js/main.e0bce309.js"
   ]
 }
