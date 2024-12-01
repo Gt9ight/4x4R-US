@@ -69,17 +69,7 @@ function Home() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? homeservice.length - 1 : prevIndex - 1));
-    };
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === homeservice.length - 1 ? 0 : prevIndex + 1));
-    };
-
-    const handleCardFlip = () => {
-        setFlipped(!flipped); // Toggle the flipped state when the card is clicked
-    };
     
     
     var settings = {

@@ -19,9 +19,9 @@ function Navbar() {
             <Link to='/gallery' onClick={showNavbar}>Gallery</Link>
             <Link to='/services' onClick={showNavbar}>Services</Link>
             <Link to='/contact' onClick={showNavbar}>Contact</Link>
-            <buutton className='nav-btn nav-close-btn' onClick={showNavbar}>
+            <button className='nav-btn nav-close-btn' onClick={showNavbar}>
                 <FaTimes/>
-            </buutton>
+            </button>
         </nav>
         <button  className='nav-btn' onClick={showNavbar}>
             <FaBars/>

@@ -134,3 +134,76 @@
     font-size: 0.9rem;
   }
 }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+.social-thumbnail {
+  width: 100px;  /* Adjust size as needed */
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  animation: breathe 2s infinite ease-in-out;
+  mix-blend-mode: multiply;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin: 40px;
+}
+.social-thumbnail:nth-child(1) {
+  animation-delay: 0s;  /* Starts immediately */
+}
+
+.social-thumbnail:nth-child(2) {
+  animation-delay: 2s;  /* Starts a little later */
+}
+
+.social-thumbnail:hover {
+  transform: scale(1.1);
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);  /* Grow */
+  }
+  100% {
+    transform: scale(1);  /* Shrink back */
+  }
+}
+
+.social-thumbnail:hover {
+  transform: scale(1.2);  /* Optional: scale up on hover for extra effect */
+}
+
+/* Optional: center the contact form content */
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-container{
+  background-color: #f3f3f3;
+  position: relative;
+  text-align: center;
+  color: #222;
+  font-size: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1.5s ease-out;
+}
+
+.servContactForm{
+  padding: 40px;
+  color: rgb(11, 10, 10)
+}  
+
+.social-links{
+  color: #161515;
+}

@@ -220,7 +220,7 @@ overflow-x: auto;
 }
 
 .Homeservice-item {
-  width: calc(45% - 20px);
+  width: 40%;
   perspective: 1000px; /* Create a 3D perspective */
   margin: 40px;
 }

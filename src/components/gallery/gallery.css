@@ -1,17 +1,267 @@
 /* Center the content in the container */
+.galleryHero {
+  position: relative;
+  margin-top: 20px;
+  height: 500px;
+  background-image: url('herogallery.jpg'); /* Change to your background image */
+  background-size: cover; /* Cover the whole container */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white; /* Text color for contrast */
+  text-align: center; /* Center text */
+  z-index: 1;
+  overflow: hidden; /* Ensure pseudo-element stays within the container */
+}
+
+.galleryHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Black filter with 50% opacity */
+  z-index: 1; /* Place behind text but above the image */
+}
+
+.galleryHeroText {
+  position: relative;
+  z-index: 2; /* Ensure text is above the background */
+  font-size: 10vw; /* Scales the text relative to the viewport width */
+  font-weight: bold; /* Optional: Make the text bold */
+  color: transparent; /* Make the text itself transparent */
+  background: url('herogallery.jpg'); /* Set the background image or gradient */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For webkit browsers like Safari */
+  background-position: 50% 50%;
+  background-size: cover; /* Ensure the image covers the text area */
+  text-align: center; /* Center the text */
+  line-height: 1.1; /* Adjust line height for better spacing */
+  padding: 20px; /* Add some padding for spacing */
+
+}
+
+/* Adjust background position further on mobile view */
+@media (max-width: 768px) {
+  .galleryHeroText {
+    font-size: 15vw; /* Make the text even bigger on smaller screens */
+    background-position: center bottom; /* Move the background further down on mobile */
+  }
+}
+/* Overall Container */
+/* Gallery grid */
 .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the content horizontally */
-    justify-content: center; /* Centers the content vertically */
-    height: 100vh; /* Full viewport height */
-    text-align: center; /* Center the text */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px; /* Rounded corners */
+  width: 100%;
+  padding-top: 100%; /* Makes the item square */
+  opacity: 0; /* Hidden by default */
+  transform: translateY(30px); /* Slide down effect */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.gallery-item.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal */
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  text-align: center;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnail-current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border: 2px solid #f00;
+  transform: scale(1.1);
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.nav-button:nth-of-type(1) {
+  left: 10px;
+}
+
+.nav-button:nth-of-type(2) {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.thumbnail-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Ensure the modal takes up the full screen on smaller devices */
+@media (max-width: 768px) {
+  .modal {
+    padding: 0; /* Remove padding for better fit */
   }
-  
-  /* Make the image bigger */
-  .construction-image {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 1000px; /* Maximum width to prevent it from growing too large */
+
+  .modal-image {
+    width: 100%;
     height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* No border radius on mobile for fullscreen effect */
   }
-  
+
+  .close-button {
+    font-size: 40px; /* Make it more prominent */
+  }
+}
+
+/* Different sizes for a dynamic grid */
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.item-2 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.item-3 {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+.item-4 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.item-5 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.item-6 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Hover Effects for 3D */
+.gallery-item:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Overlay */
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
